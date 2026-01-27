@@ -81,6 +81,7 @@ merge 1:1 variable using `tmp_sd', nogen                                     ;
 
 replace mean = mean * 100 if mean < 1                                        ;
 
+gen Category = ""                                                            ;
 replace Category = "Socio-demographic"
     if inlist(variable,"edad","hombre","casado","catolico","ideology")       ;
 replace Category = "Education and Labor market"
@@ -199,6 +200,8 @@ save "${dat}/fairness_groups.dta", replace                                   ;
 *==========================================================================*;
 *   SECTION 2: CORRELATION ANALYSIS (Absolute vs. Relative)                *;
 *==========================================================================*;
+
+use "${dat}/merged_data.dta", clear                                          ;
 
 tempname temporal                                                            ;
 tempfile temporal_file                                                       ;

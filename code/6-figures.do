@@ -224,7 +224,7 @@ twoway scatter unfair_2013 unfair_2002 if pais != "lac",  mlabel(pais_lab) mlabc
 *   FIGURE 4: CHANGE IN GINI VS CHANGE IN UNFAIRNESS                       *;
 *==========================================================================*;
 
-use "${dat}/raw/inequality_indicators_original.dta", clear                   ;
+use "${raw}/inequality_indicators_original.dta", clear                        ;
 drop if pais == "arg" & ano < 2004                                           ;
 drop if pais == "col" & inlist(ano,1999,2000,2001,2006,2007)                 ;
 drop if pais == "cri" & ano < 2010                                           ;
