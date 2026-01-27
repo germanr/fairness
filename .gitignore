@@ -44,10 +44,10 @@ desktop.ini
 
 # Large data files (exceed GitHub 100MB limit)
 data/oaxaca.dta
-rawdata/perceptions_raw.dta
+raw_data/perceptions_raw.dta
 
 # External raw data (must be downloaded separately)
-rawdata/latinobarometro.dta
+raw_data/latinobarometro.dta
 
 # Backup folder
 _backup_*/

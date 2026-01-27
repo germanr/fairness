@@ -13,7 +13,7 @@ set seed 5362                                                                ;
 
 glo user = lower("`=c(username)'")                                           ;
 glo root "C:/Users/${user}/Dropbox/Research/published-papers/fairness"       ;
-glo raw "${root}/rawdata"                                                    ;
+glo raw "${root}/raw_data"                                                   ;
 glo dat "${root}/data"                                                       ;
 glo cod "${root}/code"                                                       ;
 glo res "${root}/results"                                                    ;

@@ -2,7 +2,7 @@
 
 This repository contains replication code and data for:
 
-**Gasparini, Leonardo and Germán Reyes. "Are Fairness Perceptions Shaped by Income Inequality? Evidence from Latin America." *Journal of Economic Behavior and Organization* (2022).**
+**Gasparini, Leonardo and Germán Reyes. "Are Fairness Perceptions Shaped by Income Inequality? Evidence from Latin America." *The Journal of Economic Inequality* 20(4): 893-913 (2022).**
 
 ## Overview
 
@@ -53,7 +53,7 @@ fairness/
 │   ├── 5-tables.do     # Generates all tables
 │   └── 6-figures.do    # Generates all figures
 ├── data/               # Processed datasets
-├── rawdata/            # Raw data files
+├── raw_data/           # Raw data files
 ├── results/            # Output tables and figures
 └── paper/              # LaTeX source files
 ```
@@ -93,8 +93,12 @@ do "code/0-master.do"
 @article{gasparini2022fairness,
   title={Are Fairness Perceptions Shaped by Income Inequality? Evidence from Latin America},
   author={Gasparini, Leonardo and Reyes, Germ{\'a}n},
-  journal={Journal of Economic Behavior and Organization},
-  year={2022}
+  journal={The Journal of Economic Inequality},
+  volume={20},
+  number={4},
+  pages={893--913},
+  year={2022},
+  doi={10.1007/s10888-022-09526-w}
 }
 ```
 
