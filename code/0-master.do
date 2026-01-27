@@ -5,7 +5,7 @@ Produces:          Reproduces all results for the paper
 
 Paper:             "Are Fairness Perceptions Shaped by Income Inequality?
                     Evidence from Latin America"
-                   Crespo & Reyes (Journal of Economic Behavior and Organization)
+                   Gasparini & Reyes (Journal of Economic Inequality, 2022)
 
 Notes:
 - Run this file to reproduce all results
