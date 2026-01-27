@@ -48,10 +48,9 @@ fairness/
 │   ├── 0-master.do     # Master file - runs all analyses
 │   ├── 1-create-individual-data.do
 │   ├── 2-calculate-inequality.do
-│   ├── 3-clean-gini-2018.do
-│   ├── 4-merge-data.do
-│   ├── 5-tables.do     # Generates all tables
-│   └── 6-figures.do    # Generates all figures
+│   ├── 3-merge-data.do
+│   ├── 4-tables.do     # Generates all tables
+│   └── 5-figures.do    # Generates all figures
 ├── data/               # Processed datasets
 ├── raw_data/           # Raw data files
 ├── results/            # Output tables and figures

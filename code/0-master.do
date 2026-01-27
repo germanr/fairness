@@ -32,17 +32,14 @@ do "${cod}/1-create-individual-data.do"                                      ;
 * Note: Requires World Bank internal access. Skip if data is provided.       ;
 * do "${cod}/2-calculate-inequality.do"                                      ;
 
-* 3. Clean Gini data from Excel source                                       ;
-do "${cod}/3-clean-gini-2018.do"                                             ;
+* 3. Merge inequality with perception data                                   ;
+do "${cod}/3-merge-data.do"                                                  ;
 
-* 4. Merge inequality with perception data                                   ;
-do "${cod}/4-merge-data.do"                                                  ;
+* 4. Generate all tables (descriptive stats, regressions, correlations)      ;
+do "${cod}/4-tables.do"                                                      ;
 
-* 5. Generate all tables (descriptive stats, regressions, correlations)      ;
-do "${cod}/5-tables.do"                                                      ;
-
-* 6. Generate all figures                                                    ;
-do "${cod}/6-figures.do"                                                     ;
+* 5. Generate all figures                                                    ;
+do "${cod}/5-figures.do"                                                     ;
 
 
 exit                                                                         ;
