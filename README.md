@@ -104,8 +104,8 @@ do "code/0-master.do"
 
 ## Contact
 
-Germán Reyes
-Assistant Professor of Economics
-Middlebury College
-Email: greyes@middlebury.edu
+**Germán Reyes**<br>
+Assistant Professor of Economics<br>
+Middlebury College<br>
+Email: greyes@middlebury.edu<br>
 Web: [germanr.com](https://www.germanr.com)

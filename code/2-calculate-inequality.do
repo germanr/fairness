@@ -183,14 +183,14 @@ decode pais, gen(aux)                                                        ;
 drop pais                                                                    ;
 rename aux pais                                                              ;
 
-save "${dat}/raw/inequality_indicators_original.dta", replace                ;
+save "${raw}/inequality_indicators_original.dta", replace                ;
 
 
 *******************************************                                  ;
 *** Apply comparability adjustments     ***                                  ;
 *******************************************                                  ;
 
-use "${dat}/raw/inequality_indicators_original.dta", clear                   ;
+use "${raw}/inequality_indicators_original.dta", clear                   ;
 
 * Non-comparable surveys                                                     ;
 drop if pais == "arg" & ano < 2004                                           ;
