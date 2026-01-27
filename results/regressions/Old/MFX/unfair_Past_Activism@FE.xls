@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Created>2017-01-02T21:41:55Z</Created>
+  <LastSaved>2017-01-02T21:41:55Z</LastSaved>
+  <Version>15.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>12435</WindowHeight>
+  <WindowWidth>28800</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <Borders>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Calibri"/>
+  </Style>
+  <Style ss:ID="s63">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Calibri"/>
+   <NumberFormat/>
+  </Style>
+  <Style ss:ID="s64">
+   <Borders/>
+   <Font ss:FontName="Calibri"/>
+  </Style>
+  <Style ss:ID="s65">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Font ss:FontName="Calibri"/>
+   <NumberFormat/>
+  </Style>
+  <Style ss:ID="s66">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Calibri"/>
+  </Style>
+  <Style ss:ID="s67">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Calibri"/>
+   <NumberFormat/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Sheet1">
+  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="11" x:FullColumns="1"
+   x:FullRows="1">
+   <Column ss:AutoFitWidth="0" ss:Width="150"/>
+   <Column ss:Width="45"/>
+   <Column ss:Width="62.25"/>
+   <Column ss:Width="75.75"/>
+   <Column ss:Width="78.75"/>
+   <Column ss:Width="42" ss:Span="1"/>
+   <Row ss:Index="2">
+    <Cell ss:StyleID="s62"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">(4)</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">(1)</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">(2)</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">(3)</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">(5)</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">(6)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">VARIABLES</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">evad</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">dpol_peticion</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">dpol_protestaleg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">dpol_protestaileg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">media</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">social</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Unfair (all)</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">-0.009***</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">-0.015***</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">-0.014***</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">-0.004</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">0.001</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">0.011**</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">(0.004)</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">(0.005)</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">(0.004)</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">(0.004)</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">(0.004)</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">(0.004)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Gini coefficient</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">0.111**</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">0.389***</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">0.139*</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">0.139***</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">0.256***</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">0.297***</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">(0.046)</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">(0.093)</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">(0.076)</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">(0.043)</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">(0.055)</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">(0.049)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Observations</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">18,141</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">51,036</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">51,580</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">18,422</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">18,406</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">18,192</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">% Unfair</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">75.05</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">79.70</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">79.77</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">75.18</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">75.23</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">75.16</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">Pseudo R-squared</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0.0120</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0.0706</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0.0708</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0.0253</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0.0266</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0.0727</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>25</ActiveRow>
+     <ActiveCol>8</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+   <x:ProtectedObjects>False</x:ProtectedObjects>
+   <x:ProtectedScenarios>False</x:ProtectedScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

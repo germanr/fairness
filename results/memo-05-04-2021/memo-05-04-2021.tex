@@ -1,0 +1,226 @@
+ \documentclass[a4paper,11pt]{texMemo}
+\memofrom{Germ\'an}
+\memosubject{Resultados con datos al 2018}
+\memodate{\today}
+
+\usepackage{pdflscape, graphicx, booktabs, dcolumn, listings, amsmath, bbm,courier,pgffor,fixltx2e,setspace,fullpage, ragged2e,multirow,enumitem,afterpage,hyperref, verbatim, subcaption}
+
+
+\usepackage[section]{placeins}
+\usepackage[english]{babel}
+\usepackage[justification=centering,font=scriptsize]{caption}
+\usepackage[flushleft]{threeparttable}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[percent]{overpic}
+%\pagenumbering{gobble}
+
+\usepackage[authoryear]{natbib}
+
+\makeatletter
+\newcommand*\ExpandableInput[1]{\@@input#1 }
+\def\@biblabel#1{\hspace*{-\labelsep}}
+\makeatother
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\begin{document}
+	
+	\maketitle
+	
+	\section{Datos agregados}
+	
+	\begin{itemize}[leftmargin=*]
+		\item La Figura \ref{fig-chg-gini-unfair} muestra para cada país cómo cambio el porcentaje de unfairness perceptions (en el eje Y) y el coeficient de Gini (en el eje X). El panel \ref{fig-chg-gini-unfair-0213} muestra los resultados durante el periodo 2002-2013 (el periodo que usamos en el paper). El panel \ref{fig-chg-gini-unfair-1518} muestra los resultados duraten el periodo 2015-2018.
+		\item El panel \ref{fig-chg-gini-unfair-0213} no muestra nada nuevo. El cambio en el Gini predice bastante bien qué pasó con las fairness perceptions para todos los países excepto Honduras y Costa Rica.
+		\item El panel \ref{fig-chg-gini-unfair-1518} muestra que, a pesar de que el Gini cambió relativamente poco en todos los países, las fairness views se movieron bastante. En casi todos los países aumentó el share de unfair.
+	\end{itemize}	
+	% 
+
+\begin{figure}[htpb]
+	\caption{Change in unfairness perceptions and Gini coefficient} \label{fig-chg-gini-unfair}
+	\centering
+	\begin{subfigure}[t]{0.48\textwidth}
+		\caption{2002-2013}\label{fig-chg-gini-unfair-0213}
+		\centering
+		\includegraphics[width=\linewidth]{../fig-chg-gini-unfair-0213}
+	\end{subfigure}
+	\hfill		
+	\begin{subfigure}[t]{0.48\textwidth}
+		\caption{2015-2018} \label{fig-chg-gini-unfair-1518}
+	\includegraphics[width=\linewidth]{../fig-chg-gini-unfair-1518}
+\end{subfigure}	
+\hfill				
+{\footnotesize
+	\singlespacing \justify
+	
+	\textbf{Nota:} No hay datos de latinobarometro en 2014.
+	
+}	
+\end{figure}
+
+\newpage
+
+\begin{itemize}[leftmargin=*]
+	\item La Figura \ref{fig-gini-unfair} muestra una nube de puntos correlacionando el porcentaje de unfairness perceptions (en el eje Y) y el coeficiente de Gini (en el eje X). 
+	\item En el panel \ref{fig-scatter-gini-unfair}, cada punto es una combinación de un país-año. Esta figura es muy similar a la que tenemos en el paper, pero con datos de desigualdad de 2015-2018 (aunque no tenemos datos de Guatemala y El Salvador para ningún año en este gráfico, en el paper sí usamos datos de estos dos países). La correlación entre las dos variables es más alta en el paper que con los datos actualizados a 2018. Pero parte de esto se debe a que los datos del Gini pre-2015 no son del todo iguales en la base que usamos para el paper y en la base que me mandaste (la correlación entre los dos Ginis es 0.9). Pre-2015, la correlación entre Gini y unfairness es un poco más alta con los datos del equity lab que con los datos nuevos. 
+	\item El panel \ref{fig-binscatter-gini-unfair} muestra un binned scatterplot entre unfairness y el coeficiente de Gini. Para armar este gráfico, primero agrupé el Gini en ``bins'' de tamaño 0.01 Gini points (por ejemplo, el primer grupo es Gini $\in [0.38, 0.39)$), el segundo grupo es Gini $\in [0.39, 0.40)$), etc.). Después, calculé el average unfairness en cada grupo. El gráfico muestra una nube de puntos entre average unfairness y el Gini.
+	\item Lo que me gusta de este gráfico es que la correlación entre las dos variables es mucho más limpia que en el panel (a). Parte de esto se debe a que al promediar distintos niveles de unfairness elimina mucho measurement error. El panel \ref{fig-binscatter-gini-unfair} sugiere que la correlación entre average unfairness y el Gini es aproximadamente lineal, lo cual es evidencia a favor de usar un modelo de probabilidad lineal en las regresiones (en vez de el Logit, qué te parece?). 
+	\item Otra cosa interesante que se desprende del gráfico \ref{fig-binscatter-gini-unfair} son los extremos. Uno puede agarrar la relación lineal entre unfairness y Gini y preguntar: ¿cuál sería el porcentaje de unfairness si el Gini fuera igual a cero? Respuesta: Approx. 45\% (quizás este debería ser nuestro benchmark?). Otra pregunta interesante: ¿Cuál es el mínimo Gini a partir del cual el 100\% de población percibiría la distribución como injusta? Respuesta: 0.76 (obviamente, en los extremos es menos probable que la relación sea lineal. La cola derecha de la distribución de ingresos posiblemente siempre crea que la distribución es justa; igualmente, el ejercicio es informativo.)
+\end{itemize}	
+% 
+
+
+\begin{figure}[htpb]
+	\caption{Correlation between in unfairness perceptions and Gini coefficient} \label{fig-gini-unfair}
+	\centering
+	\begin{subfigure}[t]{0.48\textwidth}
+		\caption{Pooling all country-years}\label{fig-scatter-gini-unfair}
+		\centering
+		\includegraphics[width=\linewidth]{../fig-scatter-gini-unfair}
+	\end{subfigure}
+	\hfill		
+	\begin{subfigure}[t]{0.48\textwidth}
+		\caption{Binned scatter plot} \label{fig-binscatter-gini-unfair}
+		\includegraphics[width=\linewidth]{../fig-binscatter-gini-unfair}
+	\end{subfigure}	
+	\hfill				
+	{\footnotesize
+		\singlespacing \justify
+		
+		\textbf{Nota:} El tamaño de cada bin en el panel (b) es 0.01 Gini points.
+		
+	}	
+\end{figure}
+
+
+\newpage
+
+\begin{itemize}[leftmargin=*]
+	\item La Figura \ref{fig-timeseries-gini-unfair} muestra la serie de tiempo entre el Gini promedio y el porcentaje de Unfairness en LA. La mayor diferencia respecto al gráfico del paper es que el gráfico incluye datos del periodo 2015-2018. En este periodo el Gini se mantuvo estancado, pero las percepciones de injusticia aumentaron considerablemente de 75\% en 2015 a 83\% en 2018.
+	\item La correlación a través del tiempo entre Gini y Fairness cae de 0.83 a 0.62 (el coeficiente 0.62 sigue siendo estadísticamente significativo, en este caso al 5\%).
+\end{itemize}	
+% 
+
+
+
+\begin{figure}[htp]
+	\caption{Unfairness perceptions and Gini coefficient over time}\label{fig-timeseries-gini-unfair}  \centering
+	\centering
+	\includegraphics[width=.75\linewidth]{../fig-timeseries-gini-unfair}
+\end{figure}
+
+
+\newpage
+
+
+\begin{itemize}[leftmargin=*]
+	\item La Figura \ref{fig-intensity-fairness} descompone el cambio en Fairness en sus distintos componentes. Acá se puede ver post-2015 que lo que más cayo es el percentaje de ``fair'' y lo que más aumento fue el porcentaje de ``very unfair.''
+\end{itemize}	
+% 
+
+
+\begin{figure}[htp]
+	\caption{Intensity of unfairness perceptions, 1997-2018}\label{fig-intensity-fairness}  \centering
+	\centering
+	\includegraphics[width=.75\linewidth]{../fig-intensity-fairness}
+\end{figure}
+
+
+\newpage
+
+
+\begin{itemize}[leftmargin=*]
+	\item La Figura \ref{fig-fairness-grps} muestra la evolución de fairness views en distintos grupos. En general, la evolución es muy similar para todos los grupos.
+\end{itemize}	
+%
+
+
+
+\newpage
+
+\section{Regresiones}
+
+\begin{itemize}[leftmargin=*]
+	\item Las Tablas \ref{reg-very-unfair-logit} y \ref{reg-unfair-logit} muestran las regresiones de fairness views, usando los datos actualizados al 2018.
+	\item Los resultados son muy similares a los que tenemos en el paper. Cuando usamos ``very unfair'' el Gini es siempre significativos. Cuando usamos ``unfair'' no son significativos.
+\end{itemize}
+
+\begin{table}[htpb!]{\footnotesize
+		\begin{center}
+			\caption{Logit regressions of unfairness perceptions (very unfair) and individual characteristics (1997-2018)} \label{reg-very-unfair-logit}
+			\newcommand\w{1.95}
+			\begin{tabular}{l@{}lR{\w cm}@{}L{0.43cm}R{\w cm}@{}L{0.43cm}R{\w cm}@{}L{0.43cm}R{\w cm}@{}L{0.43cm}R{\w cm}@{}L{0.43cm}}
+				\midrule
+				&& Baseline  && Controls for   && Controls for && Controls for  && Controls for \\
+				&& specification && demographics   && education && labor market  && assets \\
+				&& (1) && (2) && (3) && (4) && (5) \\
+				\midrule 
+				\ExpandableInput{../very_unfair_logit.tex}  \midrule
+			\end{tabular}
+		\end{center}
+		\begin{singlespace} \vspace{-.5cm}
+			\noindent \justify \textbf{Note:} Each column shows the result using a different set of controls.  $^{***}$, $^{**}$ and $^*$ denote significance at 10\%, 5\% and 1\% levels, respectively. 
+		\end{singlespace} 	
+	}
+\end{table}
+
+
+
+
+\begin{table}[htpb!]{\footnotesize
+		\begin{center}
+			\caption{Logit regressions of unfairness perceptions (unfair) and individual characteristics (1997-2018)} \label{reg-unfair-logit}
+			\newcommand\w{1.95}
+			\begin{tabular}{l@{}lR{\w cm}@{}L{0.43cm}R{\w cm}@{}L{0.43cm}R{\w cm}@{}L{0.43cm}R{\w cm}@{}L{0.43cm}R{\w cm}@{}L{0.43cm}}
+				\midrule
+				&& Baseline  && Controls for   && Controls for && Controls for  && Controls for \\
+				&& specification && demographics   && education && labor market  && assets \\
+				&& (1) && (2) && (3) && (4) && (5) \\
+				\midrule 
+				\ExpandableInput{../unfair_logit.tex}  \midrule
+			\end{tabular}
+		\end{center}
+		\begin{singlespace} \vspace{-.5cm}
+			\noindent \justify \textbf{Note:} Each column shows the result using a different set of controls.  $^{***}$, $^{**}$ and $^*$ denote significance at 10\%, 5\% and 1\% levels, respectively. 
+		\end{singlespace} 	
+	}
+\end{table}
+
+\newpage
+
+\subsection{Descomposición}
+
+
+\begin{itemize}[leftmargin=*]
+	\item Las Figura \ref{fig-oaxaca} muestra la descomposición de Oaxaca-Binder que tenemos en el paper.
+\end{itemize}
+
+
+\begin{itemize}[leftmargin=*]
+	\item Hice la descomposición para dos periodos adicionales: 2015-2018 y 2002-2018.
+	\begin{itemize}
+		\item [2015-2018] Unfairness perceptions aumentaron 8 puntos porcentuales de 75.2 a 83.2. De estos 8 puntos porcentuales:
+		\begin{itemize}
+			\item 7.8 son parte del ``unexplained'' component
+			\item 0.2 son parte del ``explained'' component $\to$ pero el Gini no explica nada del explained component.
+		\end{itemize}
+		\item [2002-2018] Unfairness perceptions cayeron 3.9 puntos porcentuales de 87.1 a 83.2. De estos 3.9 puntos porcentuales:
+		
+		\begin{itemize}
+			\item  4.2 son parte del ``unexplained'' component
+			\item -0.4 son parte del ``explained'' component $\to$ de nuevo, el Gini no explica nada del explained component.
+		\end{itemize}
+		
+		\item En general, 2015-2018 es un periodo raro porque el Gini casi no cambió, pero fairness views se movieron mucho. La decomposición es consistente con esto. El gini no explica casi nada porque el gini casi no se movió.
+		
+	\end{itemize}
+\end{itemize}
+
+\end{document}
+
+
+

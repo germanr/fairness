@@ -1,0 +1,88 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,pdftex]{geometry}
+\setlength{\oddsidemargin}{3mm}		
+\setlength{\evensidemargin}{3mm}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath,amsthm,amssymb,graphicx,enumerate,booktabs,bigstrut,rotating,multirow,float,caption,etoolbox,hyperref,lmodern,comment,listings,qtree,a4wide,titlesec,moresize,bbm,subcaption,tikz,pdfescape,mathtools,flafter,enumitem,setspace,ragged2e,colortbl,lineno,lscape}
+\hypersetup{colorlinks,linkcolor={red},citecolor={blue},urlcolor={blue}}  
+
+\usepackage[justification=centering,font=small]{caption}
+
+\usepackage[authoryear]{natbib}
+\usepackage[english]{babel}
+\renewcommand{\baselinestretch}{1.25}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator*{\argmax}{argmax}
+\makeatletter
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+	{-3.25ex\@plus -1ex \@minus -.2ex}%
+	{-1.5ex \@plus -.2ex}% Formerly 1.5ex \@plus .2ex
+	{\normalfont\normalsize\bfseries}}
+\def\@biblabel#1{\hspace*{-\labelsep}}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+		\node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+\newcommand*\ExpandableInput[1]{\@@input#1 }
+\makeatother
+%\setcounter{secnumdepth}{2}
+
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\onehalfspacing
+\pdfpageheight\paperheight
+\pdfpagewidth\paperwidth
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+
+\begin{document}
+	
+	\title{Are Fairness Perceptions Shaped by Income Inequality? Evidence from Latin America\thanks{\noindent Gasparini: Centro de Estudios Distributivos, Laborales y Sociales (CEDLAS) - IIE-FCE, Universidad Nacional de La Plata and CONICET (e-mail: \text{lgasparini@cedlas.org}). Reyes: Cornell University (e-mail \text{gjr66@cornell.edu}). For helpful comments, we thank Carolina Garc\'ia Domench, Giselle Del Carmen, Rebecca Deranian, Luis Laguinge, participants of the 2021 Annual Bank Conference on Development Economics, and two anonymous referees. A previous version of this article circulated as ``Perceptions of Distributive Justice in Latin America during a Period of Falling Inequality.'' Errors and omissions are our own.}} 
+	
+	\author{Leonardo Gasparini \and Germ\'an Reyes}
+	
+	\date{\vspace{15pt} February 2022}
+	
+	\maketitle
+	
+	\begin{abstract}
+		
+		\noindent A common assumption in the literature is that the level of income inequality shapes individuals' beliefs about whether the income distribution is fair (``fairness views,'' for short). However, individuals do not directly observe income inequality (which often leads to large misperceptions), nor do they consider all inequities to be unfair. In this paper, we empirically assess the link between objective measures of income inequality and fairness views in a context of high but decreasing income inequality. We combine opinion poll data with harmonized data from household surveys of 18 Latin American countries from 1997--2015. We report three main findings. First, we find a strong and statistically significant relationship between income inequality and unfairness views across countries and over time. Unfairness views evolved in the same direction as income inequality for 17 out of the 18 countries in our sample. Second, individuals who are older, unemployed, and left-wing are, on average, more likely to perceive the income distribution as very unfair. Third, fairness views and income inequality have predictive power for individuals' self-reported propensity to mobilize and protest independent of each other, suggesting that these two variables capture different channels through which changes in the income distribution can affect social unrest. \\
+		
+%		\noindent JEL Codes: D31, D63, D83 \\
+		
+%		\noindent Keywords: Distributive Justice, Fairness, Income Inequality, Latin America, Perceptions.
+		
+	\end{abstract}
+	
+	\clearpage
+
+	\input{1-intro}	
+	\input{2-data}
+	\input{3-inequality-fairness}
+	\input{4-correlates-fairness}
+	\input{5-fairness-protests}
+	\input{6-conclusions}
+
+	\clearpage 
+	\input{7-figures}
+	
+	\clearpage		
+	\begin{singlespace}
+	 \bibliographystyle{chicago}
+	 \bibliography{references}                                                                                     
+	\end{singlespace}
+
+                                   
+	\clearpage \appendix 
+	\input{a1-app-add-figs} 	
+	\input{a2-app-data}	
+	\input{a3-app-oaxaca}
+	
+	
+\end{document}
+
+%<>><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>

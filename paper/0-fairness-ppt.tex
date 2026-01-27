@@ -1,0 +1,454 @@
+\documentclass[usenames,dvipsnames]{beamer}
+\mode<presentation>
+\usetheme{Boadilla}
+\usecolortheme{default}
+\usefonttheme{default}
+\setbeamertemplate{navigation symbols}{}
+\definecolor{beamer@blendedblue}{rgb}{0.2,0.2,0.7}
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{itemize subitem}{\tiny\raise1.5pt\hbox{\donotcoloroutermaths$\blacktriangleright$}}
+\setbeamertemplate{enumerate items}[default]
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{caption}[numbered]
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[comma]{natbib}
+\usepackage[beamer,customcolors]{hf-tikz}
+\usepackage{bigstrut,multirow,graphicx,amsmath,amssymb,enumerate,booktabs,subcaption,colortbl,bbm,ragged2e,appendixnumberbeamer,tikz,xcolor,hyperref,subcaption, multicol}
+
+\newcommand{\bv}[1]{\textcolor{BlueViolet}{#1}}
+\hypersetup{colorlinks,linkcolor={BlueViolet},citecolor={BlueViolet},urlcolor={BlueViolet}}  
+\setbeamertemplate{blocks}[rounded][shadow=false]
+\addtobeamertemplate{block begin}{\pgfsetfillopacity{0.8}}{\pgfsetfillopacity{1}}
+\setbeamercolor*{block body example}{fg= black, bg= blue!5}
+\newcommand{\E}{\mathbb{E}}
+\renewcommand*{\bibfont}{\scriptsize}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+		\node[shape=circle,draw,inner s ep=2pt] (char) {#1};}}
+
+\setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
+
+\usetikzlibrary{calc}
+\hfsetfillcolor{blue!10}
+\hfsetbordercolor{blue}
+
+\makeatletter
+\newcommand*\ExpandableInput[1]{\@@input#1 }
+\def\@biblabel#1{\hspace*{-\labelsep}}
+\makeatother
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+\title{Are Fairness Perceptions Shaped by Income Inequality? Evidence from Latin America}
+
+
+\author[]{%
+	\texorpdfstring{%
+		\begin{columns}
+			\column{.5\linewidth}
+			\centering
+			Leonardo Gasparini \\ CEDLAS, UNLP \& CONICET 
+			\column{.5\linewidth}
+			\centering
+			Germán Reyes  \\ Cornell University
+		\end{columns}
+	}
+	{Leonardo Gasparini,  Germán Reyes}
+}
+\date{June 2021}
+
+
+\AtBeginSection[]
+{
+	\begin{frame}[noframenumbering]	\frametitle{Outline}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+
+\usepackage{graphicx}
+\newcommand{\indep}{\rotatebox[origin=c]{90}{$\models$}}
+
+
+\begin{document}
+	
+	\makeatletter
+	\def\@listi{\leftmargin\leftmarginii \parsep .2em \itemsep 1em}
+	\def\@listii{\leftmargin\leftmarginii \topsep .2em \parsep .2em \itemsep .2em}
+	\newcommand*{\@rowstyle}{}
+	\newcommand*{\rowstyle}[1]{\gdef\@rowstyle{#1}\@rowstyle\ignorespaces}
+	\newcolumntype{=}{>{\gdef\@rowstyle{}}}
+	\newcolumntype{+}{>{\@rowstyle}}
+	\makeatother
+	
+	\addtocounter{framenumber}{-1}
+	
+	\begin{frame}[plain]
+		\titlepage
+	\end{frame}
+	
+	
+	\begin{frame}{Motivation}
+		
+		\begin{itemize}
+			
+			\item Several theoretical and empirical papers rely on objective measures of income inequality to explain individual-level behaviors and outcomes.
+			
+			\begin{itemize}
+				\item e.g., redistribution, social cohesion, subjective wellbeing, trust, etc.
+			\end{itemize}
+			
+			\pause
+			
+			\item Implicit assumption: individuals perceive inequality and changes in the distribution of income as unfair.
+			
+			\begin{itemize}
+				\item e.g., $\uparrow$ inequality $ \to \quad \uparrow$ unfairness perceptions $\to \quad \uparrow$ social unrest. 
+			\end{itemize}
+			
+			\pause
+			
+			\item However, two pieces of evidence cast doubt on this assumption. 
+			
+			\begin{enumerate}
+				\item Individuals do not directly observe inequality $\to$ they form beliefs $\to$ such beliefs are often biased \citep{gimpelson2018misperceiving}.
+				
+				\item Individuals do not consider all inequities as unfair (e.g., meritocrats largely accept inequality derived from effort) \citep{cappelen2007pluralism}. 
+			\end{enumerate}			
+			
+			\pause
+			
+			\item[$\Rightarrow$] The extent to which fairness perceptions are shaped by income inequality remains an important empirical question.			
+		\end{itemize}
+	\end{frame}
+	
+	
+	
+	\begin{frame}{This paper: fairness views and income inequality}
+		
+		\begin{itemize}
+			
+			\item We study the link btw fairness and inequality in a particular scenario: 
+			\begin{itemize}
+				\item Latin America (LA), a region of highly unequal countries.
+				\item The 2000s, a period of pronounced decline in inequality. 
+			\end{itemize}  
+			
+			\item We combine opinion polls data with harmonized data from household surveys to answer three main questions:
+			
+		\end{itemize}
+		
+		\begin{enumerate}
+			\item Are fairness views shaped by income inequality?
+			\item What individual-level factors explain fairness views? [see paper]
+			\item Are fairness views predictive of individuals' propensity to mobilize?
+		\end{enumerate}				
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}{Data: Latinobarómetro and SEDLAC}
+		
+		
+		\begin{itemize}
+			\item We use data from 18 LA countries over the 1997-2015 period.
+			\item \underline{Income inequality}: SEDLAC, a project which increases cross-country comparability from official household surveys.
+			\item \underline{Fairness views}: public opinion polls conducted by Latinobarómetro.
+			
+			\item[] \begin{block}{}
+				\centering \textit{How fair do you think income distribution is in [country]? Very fair, fair, unfair or very unfair?}
+			\end{block}
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	\section{Are fairness views shaped by income inequality?}
+	
+	\begin{frame}{The evolution of fairness views in LA during the 2000s}
+		
+		\begin{figure}[htpb]
+			\caption{Fairness views in Latin America over time and across countries} \label{fig-fairness-views}
+			\centering
+			\begin{subfigure}[t]{0.48\textwidth}
+				\caption*{\centering Panel A. Fairness views over time (1997-2015)}\label{fig-fairness-views-time}
+				\centering
+				\includegraphics[width=\linewidth]{../results/fig-intensity-fairness}
+			\end{subfigure}
+			\hfill		
+			\begin{subfigure}[t]{0.48\textwidth}
+				\caption*{\centering Panel B. Fairness views across countries (2002 vs. 2013)} \label{fig-fairness-views-countries}
+				\includegraphics[width=\linewidth]{../results/fig-chg-fairness-0213}
+			\end{subfigure}	
+			\hfill	
+			\tiny \justify \textbf{Notes:} Panel A presents the average across 18 LA countries of the share of individuals that perceived income distribution as very unfair, unfair, fair, and very fair over the 1997-2015 period. Panel B presents the percentage of the population that believes income distribution is either unfair or very unfair in 2002 and 2013 for all LA countries for which data is available. Due to data unavailability in 2002, for the Dominican Republic we use 2007. 
+		\end{figure}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}{Fairness perceptions and income inequality}
+		
+		\begin{figure}[htpb]
+			\caption{Fairness views and income inequality in Latin America} \label{fig-fairness-gini}
+			\centering
+			\begin{subfigure}[t]{0.48\textwidth}
+				\caption*{\centering Panel A. Correlation between unfairness views and Gini}\label{fig-binscatter-gini-unfair}
+				\centering
+				\includegraphics[width=\linewidth]{../results/fig-binscatter-gini-unfair-all}
+			\end{subfigure}
+			\hfill		
+			\begin{subfigure}[t]{0.48\textwidth}
+				\caption*{\centering Panel B. Change in fairness and Gini across countries} \label{fig-chg-gini-unfair-0213}
+				\includegraphics[width=\linewidth]{../results/fig-chg-gini-unfair-0213}
+			\end{subfigure}	
+			\hfill				
+			{\tiny
+				\justify
+				
+				\textbf{Notes:} Panel A shows a binned scatterplot of the Gini coefficient and fairness views for all country-years in our sample. To construct this figure, we group the Gini coefficient of each country-year in bins of width equal to 0.02 Gini points and then calculate the average fairness perceptions in each bin. Panel B plots the percentage point change in the share of the population that believes income distribution is either unfair or very unfair between 2002 and 2013 (or close years), and the change in the Gini coefficient between 2002 and 2013 (or close years) for all LA countries. Due to a break in data comparability or household data unavailability, for some countries, we use inequality data from adjacent years.
+				
+			}	
+		\end{figure}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}{Decomposing changes in fairness views over time}
+		
+		\begin{itemize}
+			\item The correlation is robust to controlling for country FE, year FE, and individual-level characteristics.
+			\item Several individual-level covariates predict fairness views. 
+			\begin{itemize}
+				\item e.g., Individuals who are older, unemployed, and left-wing are more likely to perceive the income distribution as very unfair.
+			\end{itemize}
+			
+			\item Hence, both aggregate inequality and individual-level characteristics are associated with fairness perceptions.
+			
+			\item Important question: which of these two factors mainly explain (in an accounting sense) the reduction in unfairness beliefs? 
+			
+			\item To answer this, we perform a Oaxaca-Blinder decomposition.
+			
+		\end{itemize}
+		
+	\end{frame}	
+	
+	
+	
+	\begin{frame}{Intuition of the Oaxaca-Blinder decomposition}
+		
+		\begin{itemize}
+			\item Consider the following regression
+			%
+			\begin{align}
+				\text{Unfair}_{ict} = \beta_t X_{ict} + \gamma_t \text{Gini}_{ct} + \varepsilon_{ict} \quad \text{for} \quad t \in \{2002, 2013\} 
+			\end{align}
+			%
+			where $\text{Unfair}_{ict}$ equals 1 if individual $i$ perceives the distribution of country $c$ in year $t$ as unfair and $X_{ict}$ includes individual-level controls. \pause
+			
+			\item The fraction of individuals who perceive the distribution as unfair is
+			%
+			\begin{align} \label{eq-shr-unfair}
+				\overline{\text{Unfair}}_{t} = \hat{\beta}_{t} \bar{X}_{t} + \hat{\gamma}_{t} \overline{\text{Gini}}_{t}  \quad \text{for} \quad t \in \{2002, 2013\} 
+			\end{align}
+			%
+			\pause
+			\item We can calculate the difference between the two years:
+			%
+			\begin{align} \label{eq_oaxaca}
+				\Delta \text{Unfair} &=  
+				\underbrace{\hat{\beta}_{2002} (\bar{X}_{2013} - \bar{X}_{2002})}_{\equiv \Delta \text{Composition pop.}} + 
+				\underbrace{\hat{\gamma}_{2002} (\overline{\text{Gini}}_{2013} - \overline{\text{Gini}}_{2002})}_{\equiv \Delta \text{Gini}} \notag \\ &+ \underbrace{\bar{X}_{2013} (\hat{\beta}_{2013} - \hat{\beta}_{2002})+ \overline{\text{Gini}}_{2013} (\hat{\gamma}_{2013} - \hat{\gamma}_{2002})}_{\text{Unexplained}}
+			\end{align}
+			% 	
+			
+		\end{itemize}
+		
+	\end{frame}	
+	
+	\begin{frame}{Results of the Oaxaca-Blinder decomposition}
+		
+		
+		\begin{figure}[htp]
+			\caption{Oaxaca-Blinder decomposition of unfairness perceptions, 2002-2013}\label{fig-oaxaca}  \centering
+			\centering
+			\includegraphics[width=.75\linewidth]{../results/fig-oaxaca-0213.png}
+			\hfill				
+			{\tiny \justify
+				
+				\textbf{Notes:} The regressors include the Gini, age, age squared, and dummy variables for: civil status, gender, literacy, maximum educational attainment, labor force participation, unemployment status, an assets index, political ideology, and religious views.
+				
+				% oaxaca unfair_all gini_lel edad edad2 hombre casado alfabeto edu2 edu3 edu4 pea desocupa cloaca computadora lavarropas telefono_fijo auto [iw=pondera] 
+			}	
+		\end{figure}
+		
+	\end{frame}
+	
+	
+	\section{Are fairness views predictive of individuals' propensity to mobilize?}
+	
+	\begin{frame}{Fairness views and propensity to mobilize}
+		
+		\begin{itemize}
+			\item A vast literature relates economic inequality to social cohesion, conflict, and activism.
+			\item Arguably, the link between inequality and unrest is partly mediated by fairness views. 
+			\begin{itemize}
+				\item e.g., individuals mobilize partly because they believe inequities are unfair.
+			\end{itemize}
+			\item However, a given level of income inequality might not be seen as unfair by some individuals.
+			\item[$\Rightarrow$] A regression that links social unrest to inequality can contain a substantial amount of measurement error. 
+			\item We sidetrack these issues by directly measuring the link between social unrest and fairness views (controlling for inequality).
+		\end{itemize}
+		
+	\end{frame}	
+	
+	
+	
+	\begin{frame}{Measuring social unrest}
+		
+		\begin{itemize}
+			\item We measure social unrest using the opinion polls data (self-reported).
+			
+			\item For several political activities, respondent answer whether they...
+			\begin{itemize}
+				\item[(i)] Have ever done a given activity;
+				\item[(ii)] Would do the activity; or
+				\item[(iii)] Would never do the activity.
+			\end{itemize}
+			
+			\item Some examples of the types of political activities that we investigate
+				
+			\begin{itemize}
+			\begin{multicols}{2}
+				\item Complaining on social media.
+				\item Signing a petition.
+				\item Protesting without authorization.
+				\item Refusing to pay taxes.
+				\end{multicols}
+			\end{itemize}
+			
+			\item For each activity, we create a dummy that equals 1 if an individual reports having done the activity in the past. 
+			\begin{itemize}
+				\item Regress each of these dummies on unfairness perceptions (very unfair), the Gini, and individual-level covariates. 
+			\end{itemize}
+			
+		\end{itemize}
+		
+	\end{frame}	
+	
+
+\begin{frame}{Logit regressions of activism, unfairness, and inequality}
+	\begin{table}[htpb!]
+		{\scriptsize
+			\begin{center}
+				\newcommand\w{1.7}
+				\begin{tabular}{l@{}lR{\w cm}@{}L{0.43cm}R{\w cm}@{}L{0.43cm}R{\w cm}@{}L{0.43cm}R{\w cm}@{}L{0.43cm}R{\w cm}@{}L{0.43cm}}
+					\midrule
+					&&  Complain on   && Sign a    && Unauth.  && Refuse to \\
+					&& social media  && petition  && protest  && pay taxes   \\
+					&& (1)           && (2)       && (3)      && (4)     \\
+					\midrule 
+					
+					\addlinespace
+					\multicolumn{9}{l}{\hspace{-1em} \textbf{Panel A.\ Have done the activity in the past}} \\
+					\midrule
+					Very unfair   &&\tikzmarkin<2>{both1}(.4,-0.2)(0,0.5)0.016&\sym{***}&\tikzmarkin<3>{fairness}(.4,-0.2)(0,0.5)0.013&\sym{**}&\tikzmarkin<4>{gini}(.4,-0.2)(0,0.5)$-$0.001&&0.004&\\
+					&&(0.004&)&(0.006&)&(0.004&)&(0.005&)\\
+					Gini          &&0.322&\sym{*}&$-$0.123&&0.164&\sym{*}&0.105&\\
+					&&(0.175&)&(0.287&)&(0.092&)&(0.089&)\\
+					Mean Dep. Var.&&0.078 \tikzmarkend{both1} &&0.072 \tikzmarkend{fairness}&&0.186\tikzmarkend{gini}&&0.046&&0.043&\\
+					
+					\midrule
+					
+					\addlinespace
+					\multicolumn{9}{l}{\hspace{-1em} \textbf{Panel B.\ Have done the activity in the past or would do the activity}} \\ 
+					\midrule
+					Very unfair   &&0.033&\sym{**}&$-$0.012&&0.016&& \tikzmarkin<2>{both2}(.4,-0.2)(0,0.5)0.024&\sym{**}&\\
+					&&(0.015&)&(0.008&)&(0.014&)&(0.010&)\\
+					Gini          &&0.627&&$-$0.597&&0.452&&0.629&\sym{*}&\\
+					&&(0.786&)&(0.479&)&(0.446&)&(0.328&)\\
+					Mean Dep. Var.&&0.413&&0.527&&0.210&&0.187\tikzmarkend{both2}&\\
+					
+					\midrule
+					
+				\end{tabular}
+			\end{center}	
+		}
+	\end{table}
+	
+	\begin{itemize}
+		\only<1>{\item Fairness views are predictive of political activism, but the relationship is nuanced.}
+		\only<2>{\item There are activities (e.g., refusing to pay taxes) where both fairness views and inequality have predictive power independent of each other.}
+		\only<3>{\item For some activities (e.g., signing a petition), only fairness views have predictive power.}
+		\only<4>{\item There are also activities (e.g., taking part in an unauthorized protest), where only inequality has predictive power.}
+	\end{itemize}
+	
+\end{frame}	
+	
+\begin{frame}{Conclusions}
+
+	\begin{itemize}
+		\item We study perceptions of distributive justice in a context of falling income inequality.
+		\item Main takeaways:
+	\end{itemize}	
+	
+		\begin{enumerate}
+			
+			
+			\item Fairness beliefs moved in line with the evolution of objective inequality.
+			
+			\begin{itemize}
+				\item In our sample, both unfairness perceptions and income inequality declined across countries and over time.
+			\end{itemize}  
+			
+			\item Some individual-level characteristics, such as unemployment status and political ideology, are systematically correlated to fairness views.
+			\begin{itemize}
+				\item Yet, aggregate inequality trends were more important for explaining changes in beliefs over time.
+			\end{itemize}  
+			
+			\item Suggestive evidence that fairness views have predictive power for social unrest above and beyond income inequality (and vice-versa).
+		\end{enumerate}
+
+\end{frame}	
+
+
+
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%     End of presentation
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\date{Comments? Questions? Want the latest draft of the paper? \\ You can reach me at \url{gjr66@cornell.edu}}
+
+	
+	\begin{frame}[plain]
+		\titlepage
+	\end{frame}
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\appendix 
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\begin{frame}[plain]
+		\begin{center}
+			\Huge \usebeamercolor[fg]{structure} Appendix
+		\end{center}
+	\end{frame}
+	
+	
+	
+	\begin{frame}{References}
+		\bibliographystyle{apalike} \bibliography{references} 
+	\end{frame}
+	
+\end{document}
+
+
+

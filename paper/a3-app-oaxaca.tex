@@ -1,0 +1,41 @@
+\clearpage	
+\section{The Oaxaca-Blinder Decomposition} \label{sec_oaxaca}
+
+\setcounter{table}{0}
+\setcounter{figure}{0}
+\setcounter{equation}{0}	
+\renewcommand{\thetable}{C\arabic{table}}
+\renewcommand{\thefigure}{C\arabic{figure}}
+\renewcommand{\theequation}{C\arabic{equation}}
+
+The starting point to decompose changes in unfairness perceptions between 2002 and 2013 is the following equation:
+%
+\begin{align}
+	\text{Unfair}_{ict} = \beta_t X_{ict} + \gamma_t \text{Gini}_{ct} + \varepsilon_{ict} \quad \text{for} \quad t \in \{2002, 2013\}, 
+\end{align}
+%
+where $t$ indicates the year in which perceptions are elicited and $X_{ict}$ is a vector that contains individual-level controls. The fraction of individuals who perceive the income distribution as unfair in year $t$ can be calculated as
+%
+\begin{align}
+	\overline{\text{Unfair}}_{t} = \hat{\beta}_{t} \bar{X}_{t} + \hat{\gamma}_{t} \overline{\text{Gini}}_{t}  \quad \text{for} \quad t \in \{2002, 2013\}, 
+\end{align}
+%
+where $\bar{X}_t$ is a vector of the average values of the explanatory variables in year $t$, and $\hat{\beta}$ the vector of OLS-estimated coefficients. The change in unfairness beliefs between 2013 and 2002 is given by
+%
+\begin{align} \label{eq-diff-fair}
+	\underbrace{\overline{\text{Unfair}}_{2013} - \overline{\text{Unfair}}_{2013}}_{\equiv \Delta \text{Unfair}} = (\hat{\beta}_{2013} \bar{X}_{2013} + \hat{\gamma}_{2013} \overline{\text{Gini}}_{2013}) - (\hat{\beta}_{2002} \bar{X}_{2002} + \hat{\gamma}_{2002} \overline{\text{Gini}}_{2002})
+\end{align}
+
+Adding and subtracting $\hat{\beta}_{2002} \bar{X}_{2013} + \hat{\gamma}_{2002} \overline{\text{Gini}}_{2013}$ to equation \eqref{eq-diff-fair} yields
+%
+\begin{align} \label{eq_oaxaca}
+	\Delta \text{Unfair} &=  
+	\underbrace{\hat{\beta}_{2002} (\bar{X}_{2013} - \bar{X}_{2002})}_{\equiv \Delta \text{Demog.}} + 
+	\underbrace{\hat{\gamma}_{2002} (\overline{\text{Gini}}_{2013} - \overline{\text{Gini}}_{2002})}_{\equiv \Delta \text{Gini}} \notag \\ &+ \underbrace{\bar{X}_{2013} (\hat{\beta}_{2013} - \hat{\beta}_{2002})+ \overline{\text{Gini}}_{2013} (\hat{\gamma}_{2013} - \hat{\gamma}_{2002})}_{\text{Residual}}
+\end{align}
+% 
+
+The first two terms of equation \eqref{eq_oaxaca} are usually known as the ``composition effect.'' These effects capture the difference between the average perceptions in 2002 and the counterfactual perceptions 2013 had the $\hat{\beta}$'s and $\hat{\gamma}$---i.e., the elasticity of perceptions to the different covariables---remained constant during the 2002--13 period. The first term captures differences in individual-level demographic variables that determine unfairness perceptions in the model (such as educational attainment, age, and employment status). The second term captures changes in aggregate trends in income inequality.
+
+The third term of \eqref{eq_oaxaca} reflects the difference between the average fairness views in 2013 and the counterfactual fairness views in 2002 with the observable attributes of 2013. Thus, this component reflects changes in fairness views due to changes in the elasticity of the different covariables between both years. Since we cannot explain why the coefficients attached to each variable changed, this term is usually viewed as the ``unexplained'' part of the decomposition and treated as the residual of the decomposition.
+

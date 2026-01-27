@@ -1,0 +1,240 @@
+\begin{center}\noindent{\LARGE \textbf{Appendix}}\end{center}
+
+\section{Additional Figures and Tables} \label{app_add_figs}
+
+\setcounter{table}{0}
+\setcounter{figure}{0}
+\setcounter{equation}{0}	
+\renewcommand{\thetable}{A\arabic{table}}
+\renewcommand{\thefigure}{A\arabic{figure}}
+\renewcommand{\theequation}{A\arabic{equation}}
+
+
+\begin{figure}[htpb]
+	\caption{Perceptions of unfairness and individual characteristics, 1997--2015} \label{fig-fairness-grps}
+	\centering
+	\begin{subfigure}[t]{.48\textwidth}
+		\caption*{Panel A. By age}\label{fig-fairness-age}
+		\centering
+		\includegraphics[width=\linewidth]{../results/fig-fairness-age}
+	\end{subfigure}
+	\hfill		
+	\begin{subfigure}[t]{0.48\textwidth}
+		\caption*{Panel B. By sex}\label{fig-fairness-sex}
+		\centering
+		\includegraphics[width=\linewidth]{../results/fig-fairness-sex}
+	\end{subfigure}
+	\hfill		
+	\begin{subfigure}[t]{.48\textwidth}
+		\caption*{Panel C. By educational attainment}\label{fig-fairness-educ}
+		\centering
+		\includegraphics[width=\linewidth]{../results/fig-fairness-educ}
+	\end{subfigure}
+	\hfill		
+	\begin{subfigure}[t]{0.48\textwidth}
+		\caption*{Panel D. By employment status}\label{fig-fairness-employ}
+		\centering
+		\includegraphics[width=\linewidth]{../results/fig-fairness-employ}
+	\end{subfigure}	
+	\hfill				
+	{\footnotesize
+		\singlespacing \justify
+		
+		\textbf{Notes:} This figure shows the share of individuals who perceive the income distribution as unfair or very unfair according to their age, gender, maximum educational attainment, and employment status.
+		
+		
+	}
+\end{figure}
+
+\clearpage 
+\begin{figure}[htp]
+	\caption{The evolution of fairness views and income inequality in Latin America}\label{fig-timeseries-gini-unfair}  \centering
+	\centering
+	\includegraphics[width=.75\linewidth]{../results/fig-timeseries-gini-unfair}
+	\hfill				
+	{\footnotesize
+		\singlespacing \justify
+		
+		\textbf{Notes:} This figure shows the evolution of the average Gini coefficient across countries in our sample (right-hand-side variable) and the fraction of the population who perceive the income distribution as unfair or very unfair (left-hand-side variable) over 1997--2015. To have a balanced panel of countries over time, we linearly extrapolated the Gini coefficient in years in which income microdata is not available (see Appendix \ref{sec_data}).
+		
+	}
+\end{figure}
+
+
+
+\clearpage 
+\begin{table}[H]{\footnotesize
+		\begin{center}
+			\caption{Descriptive statistics of our sample} \label{tab-sum-stats}
+			\begin{tabular}{lccc}
+				\midrule
+				&  Mean  &  Standard Dev.  & Observations \\
+				& (1) & (2) & (3) \\
+				\midrule
+				\textbf{\hspace{-1em} Panel A. Sociodemographic} &   &   &  \\
+				Age & 39.75 & 16.23 &         225,551  \\
+				Male (\%) & 48.97 & 0.50 &         225,567  \\
+				Married or civil union (\%) & 56.27 & 0.50 &         224,081  \\
+				Catholic religion (\%) & 68.01 & 0.47 &         222,790  \\
+				Ideology (10 = right-wing) & 5.48 & 2.64 &         131,980  \\
+				\textbf{\hspace{-1em} Panel B. Education and Labor market} &   &   &  \\
+				Literate (\%) & 90.31 & 0.30 &         224,056  \\
+				Secondary education or more (\%) & 33.65 & 0.47 &         224,056  \\
+				Parents with secondary education (\%) & 17.43 & 0.38 &         184,884  \\
+				Economically active (\%) & 64.14 & 0.48 &         225,222  \\
+				Unemployed (\% Labor Force) & 9.89 & 0.30 &         225,222  \\
+				\textbf{\hspace{-1em} Panel C. Access to services} &   &   &  \\
+				Access to a sewerage (\%) & 69.59 & 0.46 &         222,530  \\
+				Access to running water (\%) & 88.83 & 0.31 &         204,340  \\
+				\textbf{\hspace{-1em} Panel D. Asset ownership} &   &   &  \\
+				Car (\%) & 28.21 & 0.45 &         222,338  \\
+				Computer (\%) & 33.79 & 0.47 &         222,645  \\
+				Fridge (\%) & 79.22 & 0.41 &         146,686  \\
+				Homeowner (\%) & 73.92 & 0.44 &         223,603  \\
+				Mobile (\%) & 80.61 & 0.40 &         172,253  \\
+				Washing machine (\%) & 54.71 & 0.50 &         223,122  \\
+				Landline (\%) & 42.28 & 0.49 &         222,968  \\
+				\midrule
+			\end{tabular}
+		\end{center}
+		\begin{singlespace} \vspace{-.5cm}
+			\noindent \justify \textbf{Note:} This table shows summary statistics on our sample pooling data from all countries in our sample over 1997--2015.
+		\end{singlespace}
+	}
+\end{table}
+
+
+% Fairness perceptions by population group pooling data 1997-2015, in %
+\clearpage 
+\begin{table}[H]{\footnotesize
+		\begin{center}
+			\caption{Fairness views by population group} \label{tab-fairness-grp}
+			\newcommand\w{1.70}
+			\begin{tabular}{l@{}R{\w cm}R{\w cm}R{\w cm}R{\w cm}}
+				\midrule					
+				& \multicolumn{4}{c}{\% of individuals who believe income distribution is:} \\
+				\cmidrule{2-5}  & Very unfair & Unfair & Fair & Very fair \\
+				& (1) & (2) & (3) & (4) \\
+				\midrule
+				All & 28.2 & 51.6 & 17.3 & 2.9 \\
+				\textbf{\hspace{-1em} Panel A. Gender} &   &   &   &  \\
+				Female & 28.3 & 52.2 & 16.7 & 2.8 \\
+				Male & 28.0 & 51.1 & 17.9 & 3.0 \\
+				\textbf{\hspace{-1em} Panel B. Age group} &   &   &   &  \\
+				15-24 & 25.2 & 52.0 & 19.7 & 3.1 \\
+				25-40 & 28.5 & 51.3 & 17.2 & 3.0 \\
+				41-64 & 29.5 & 51.7 & 16.0 & 2.8 \\
+				65+ & 29.2 & 51.6 & 16.6 & 2.5 \\
+				\textbf{\hspace{-1em} Panel C. Civil status} &   &   &   &  \\
+				Married & 28.3 & 51.9 & 17.0 & 2.8 \\
+				Not married & 27.9 & 51.4 & 17.7 & 3.1 \\
+				\textbf{\hspace{-1em} Panel D. Religion} &   &   &   &  \\
+				Catholic & 28.2 & 51.7 & 17.2 & 2.9 \\
+				Not catholic & 28.0 & 51.5 & 17.5 & 3.0 \\
+				\textbf{\hspace{-1em} Panel E. Education level} &   &   &   &  \\
+				Less than Primary & 27.7 & 51.6 & 17.7 & 3.0 \\
+				Complete Primary & 27.9 & 52.2 & 17.4 & 2.6 \\
+				Complete Secondary & 29.1 & 53.2 & 15.0 & 2.7 \\
+				Complete Tertiary & 29.0 & 50.8 & 17.1 & 3.1 \\
+				\textbf{\hspace{-1em} Panel F. Type of employment} &   &   &   &  \\
+				Employee & 28.3 & 51.5 & 17.2 & 2.9 \\
+				Employer & 24.3 & 53.9 & 19.0 & 2.8 \\
+				Self-employed & 28.0 & 51.4 & 17.5 & 3.1 \\
+				Unemployed & 30.3 & 51.6 & 15.1 & 3.0 \\
+				\textbf{\hspace{-1em} Panel E. Country} &   &   &   &  \\
+				Argentina & 38.17 & 50.74 & 10.26 & 0.83 \\
+				Bolivia & 18.01 & 56.13 & 23.39 & 2.48 \\
+				Brazil & 31.95 & 53.71 & 12.85 & 1.49 \\
+				Chile & 40.20 & 49.93 & 8.42 & 1.45 \\
+				Colombia & 35.15 & 51.20 & 11.40 & 2.26 \\
+				Costa Rica & 23.20 & 53.55 & 20.13 & 3.12 \\
+				Dominican Rep. & 32.31 & 46.52 & 17.61 & 3.56 \\
+				Ecuador & 21.45 & 47.46 & 27.58 & 3.51 \\
+				El Salvador & 22.73 & 53.16 & 20.45 & 3.65 \\
+				Guatemala & 28.29 & 51.34 & 16.70 & 3.66 \\
+				Honduras & 28.87 & 53.42 & 14.33 & 3.38 \\
+				Mexico & 32.15 & 49.75 & 15.32 & 2.78 \\
+				Nicaragua & 18.69 & 51.88 & 24.33 & 5.11 \\
+				Panama & 27.39 & 48.01 & 20.25 & 4.34 \\
+				Paraguay & 38.31 & 48.80 & 10.95 & 1.93 \\
+				Peru & 25.03 & 61.89 & 11.70 & 1.38 \\
+				Uruguay & 18.22 & 57.51 & 22.64 & 1.64 \\
+				Venezuela & 23.51 & 42.96 & 26.62 & 6.92 \\
+				\midrule
+			\end{tabular}
+		\end{center}
+		\begin{singlespace} \vspace{-.5cm}
+			\noindent \justify \textbf{Note:} This table shows the fraction of individuals in our sample who perceive the income distribution as very unfair, unfair, fair, or very fair.
+		\end{singlespace}
+	}
+\end{table}
+
+
+
+\clearpage
+\begin{table}[htpb!]{\footnotesize
+		\begin{center}
+			\caption{Logit regressions of unfairness perceptions (unfair) and individual characteristics} \label{unfair_logit}
+			\newcommand\w{1.30}
+			\begin{tabular}{l@{}lR{\w cm}@{}L{0.43cm}R{\w cm}@{}L{0.43cm}R{\w cm}@{}L{0.43cm}R{\w cm}@{}L{0.43cm}R{\w cm}@{}L{0.43cm}R{\w cm}@{}L{0.43cm}}
+				\midrule
+				&& 	\multicolumn{12}{c}{Dependent Variable: Believes income distribution is unfair or very unfair}  \\\cmidrule{3-14} 
+				%					&&          &&       &&          && Labor     &&  && Ideology, \\
+				%					&& Baseline && Demog.   && Education && status  && Assets && Religion \\
+				&& (1) && (2) && (3) && (4) && (5) && (6) \\	
+				\midrule 
+				\ExpandableInput{../results/unfair_logit}
+				\midrule
+			\end{tabular}
+		\end{center}
+		\begin{singlespace}  \vspace{-.5cm}
+			\noindent \justify \textbf{Notes:} This table shows estimates of the relationship between an indicator that equals one for individuals who believe that the income distribution is unfair or very unfair and the Gini coefficient controlling for individuals' characteristics. Coefficients are estimated through Logit regressions and represent the marginal effects evaluated at the mean values of the rest of the variables. Observations are weighted by the individual's probability of being interviewed. All specifications include country and year fixed effects. $^{***}$, $^{**}$ and $^*$ denote significance at 10\%, 5\% and 1\% levels, respectively. Heteroskedasticity-robust standard errors clustered at the country-by-year level in parentheses. 
+		\end{singlespace} 	
+	}
+\end{table}
+
+
+\clearpage
+\begin{table}[htpb!]{\footnotesize
+		\begin{center}
+			\caption{Logit regressions of unfairness perceptions (very unfair) and different inequality indicators} \label{unfair_ineq_logit}
+			\newcommand\w{1.50}
+			\begin{tabular}{l@{}lR{\w cm}@{}L{0.43cm}R{\w cm}@{}L{0.43cm}R{\w cm}@{}L{0.43cm}R{\w cm}@{}L{0.43cm}R{\w cm}@{}L{0.43cm}}
+				\midrule
+				&& 	\multicolumn{10}{c}{Dependent Variable: Believes income distribution is very unfair}  \\\cmidrule{3-12} 
+				&& (1) && (2) && (3) && (4) && (5)  \\	
+				\midrule 
+				\ExpandableInput{../results/very_unfair_ineq_logit}
+				\midrule
+			\end{tabular}
+		\end{center}
+		\begin{singlespace}  \vspace{-.5cm}
+			\noindent \justify \textbf{Notes:} This table shows estimates of the relationship between an indicator that equals one for individuals who believe income distribution is unfair or very unfair and several inequality indicators controlling for individuals' characteristics. Coefficients are estimated through Logit regressions and represent the marginal effects evaluated at the mean values of the rest of the variables. Observations are weighted by the individual's probability of being interviewed. All specifications include country and year fixed effects. $^{***}$, $^{**}$ and $^*$ denote significance at 10\%, 5\% and 1\% levels, respectively. Heteroskedasticity-robust standard errors clustered at the country-by-year level in parentheses. 
+			
+		\end{singlespace} 	
+	}
+\end{table}
+
+
+
+
+\begin{table}[htpb!]{\footnotesize
+		\begin{center}
+			\caption{OLS regressions of unfairness perceptions (very unfair) and individual characteristics} \label{very_unfair_lpm}
+			\newcommand\w{1.30}
+			\begin{tabular}{l@{}lR{\w cm}@{}L{0.43cm}R{\w cm}@{}L{0.43cm}R{\w cm}@{}L{0.43cm}R{\w cm}@{}L{0.43cm}R{\w cm}@{}L{0.43cm}R{\w cm}@{}L{0.43cm}}
+				\midrule
+				&& 	\multicolumn{12}{c}{Dependent Variable: Believes income distribution is very unfair}  \\\cmidrule{3-14} 
+				%					&&          &&       &&          && Labor     &&  && Ideology, \\
+				%					&& Baseline && Demog.   && Education && status  && Assets && Religion \\
+				&& (1) && (2) && (3) && (4) && (5) && (6) \\	
+				\midrule 
+				\ExpandableInput{../results/very_unfair_lpm}
+				\midrule
+			\end{tabular}
+		\end{center}
+		\begin{singlespace}  \vspace{-.5cm}
+			\noindent \justify \textbf{Notes:} This table presents estimates of the correlation between a dummy variable that indicates if the individual believes income distribution is unfair or very unfair and the Gini coefficient controlling for individuals' characteristics. Coefficients are estimated through a linear probability model. Observations are weighted by the individual's probability of being interviewed. All specifications include country and year fixed effects. $^{***}$, $^{**}$ and $^*$ denote significance at 10\%, 5\% and 1\% levels, respectively. Heteroskedasticity-robust standard errors clustered at the country-by-year level in parentheses. 
+		\end{singlespace} 	
+	}
+\end{table}

@@ -1,0 +1,66 @@
+# Stata
+*.log
+*.smcl
+*.sthlp
+
+# LaTeX auxiliary files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.out
+*.toc
+*.synctex.gz
+*.synctex(busy)
+*.nav
+*.snm
+*.vrb
+
+# PDF output (keep source, not compiled)
+paper/*.pdf
+
+# Backup and temp files
+*~
+*.bak
+*.tmp
+._*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Dropbox conflicts
+*conflicted copy*
+
+# Large data files (exceed GitHub 100MB limit)
+data/oaxaca.dta
+rawdata/perceptions_raw.dta
+
+# External raw data (must be downloaded separately)
+rawdata/latinobarometro.dta
+
+# Backup folder
+_backup_*/
+
+# Old code folder (already in version control history)
+code/old/
+code/dataverse/
+
+# Old paper files
+paper/old/
+
+# Archive/scratch folder
+the_box/
+
+# Windows artifacts
+nul
